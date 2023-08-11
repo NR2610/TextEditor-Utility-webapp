@@ -38,10 +38,8 @@ export default function Textform(props) {
   };
 
   const copy = () => {
-    var t = document.getElementById("exampleFormControlTextarea1");
-    t.select();
     props.showAlert("String Copied", "success");
-    navigator.clipboard.writeText(t.value);
+    navigator.clipboard.writeText(text);
   };
 
   //  setText("i Enter Text");
@@ -79,7 +77,7 @@ export default function Textform(props) {
             className="form-control"
             id="exampleFormControlTextarea1"
             style={{
-              backgroundColor: props.mode === "dark" ? "#13466e" : "white",
+              backgroundColor: props.mode === "dark" ? "grey" : "white",
               color: props.mode === "dark" ? "white" : "#042743"
             }}
             value={text}
@@ -87,28 +85,28 @@ export default function Textform(props) {
             rows="10"
           />
         </div>
-        <button className="btn btn-primary mx-2" onClick={uppercase}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-2" onClick={uppercase}>
           Convert To Uppercase
         </button>
-        <button className="btn btn-primary mx-4" onClick={lowercase}>
+        <button disabled={text.length === 0} className="btn btn-primary mx-4" onClick={lowercase}>
           Convert To lowercase
         </button>
-        <button type="submit" onClick={speak} className="btn btn-warning mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={speak} className="btn btn-warning mx-2 my-2">
           Speak
         </button>
-        <button type="submit" onClick={reverse} className="btn btn-info mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={reverse} className="btn btn-info mx-2 my-2">
           reversed
         </button>
-        <button type="submit" onClick={capitalized} className="btn btn-info mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={capitalized} className="btn btn-info mx-2 my-2">
           capital
         </button>
-        <button type="submit" onClick={clear} className="btn btn-info mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={clear} className="btn btn-info mx-2 my-2">
           Clear Text
         </button>
-        <button type="submit" onClick={copy} className="btn btn-info mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={copy} className="btn btn-info mx-2 my-2">
           Copy Text
         </button>
-        <button type="submit" onClick={extraspace} className="btn btn-info mx-2 my-2">
+        <button disabled={text.length === 0} type="submit" onClick={extraspace} className="btn btn-info mx-2 my-2">
           remove space
         </button>
       </div>
