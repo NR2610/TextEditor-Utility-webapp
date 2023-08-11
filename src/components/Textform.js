@@ -93,22 +93,22 @@ export default function Textform(props) {
         <button className="btn btn-primary mx-4" onClick={lowercase}>
           Convert To lowercase
         </button>
-        <button type="submit" onClick={speak} className="btn btn-warning mx-2 my-2">
+        <button type="submit" onClick={speak} className="btn btn-warning mx-1 my-1">
           Speak
         </button>
-        <button type="submit" onClick={reverse} className="btn btn-info mx-2 my-2">
+        <button type="submit" onClick={reverse} className="btn btn-info mx-1 my-1">
           reversed
         </button>
-        <button type="submit" onClick={capitalized} className="btn btn-info mx-2 my-2">
+        <button type="submit" onClick={capitalized} className="btn btn-info mx- my-1">
           capital
         </button>
-        <button type="submit" onClick={clear} className="btn btn-info mx-2 my-2">
+        <button type="submit" onClick={clear} className="btn btn-info mx-1   my-1">
           Clear Text
         </button>
-        <button type="submit" onClick={copy} className="btn btn-info mx-2 my-2">
+        <button type="submit" onClick={copy} className="btn btn-info mx-1 my-1">
           Copy Text
         </button>
-        <button type="submit" onClick={extraspace} className="btn btn-info mx-2 my-2">
+        <button type="submit" onClick={extraspace} className="btn btn-info mx-1 my-1">
           remove space
         </button>
       </div>
