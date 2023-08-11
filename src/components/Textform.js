@@ -93,22 +93,22 @@ export default function Textform(props) {
         <button className="btn btn-primary mx-4" onClick={lowercase}>
           Convert To lowercase
         </button>
-        <button type="submit" onClick={speak} className="btn btn-warning mx-1 my-1">
+        <button type="submit" onClick={speak} className="btn btn-warning mx-2 my-2">
           Speak
         </button>
-        <button type="submit" onClick={reverse} className="btn btn-info mx-1 my-1">
+        <button type="submit" onClick={reverse} className="btn btn-info mx-2 my-2">
           reversed
         </button>
-        <button type="submit" onClick={capitalized} className="btn btn-info mx- my-1">
+        <button type="submit" onClick={capitalized} className="btn btn-info mx-2 my-2">
           capital
         </button>
-        <button type="submit" onClick={clear} className="btn btn-info mx-1   my-1">
+        <button type="submit" onClick={clear} className="btn btn-info mx-2 my-2">
           Clear Text
         </button>
-        <button type="submit" onClick={copy} className="btn btn-info mx-1 my-1">
+        <button type="submit" onClick={copy} className="btn btn-info mx-2 my-2">
           Copy Text
         </button>
-        <button type="submit" onClick={extraspace} className="btn btn-info mx-1 my-1">
+        <button type="submit" onClick={extraspace} className="btn btn-info mx-2 my-2">
           remove space
         </button>
       </div>
@@ -125,6 +125,13 @@ export default function Textform(props) {
           words
         </p>
         <p>{text.trim().length} characters</p>
+        <p>
+          {0.008 *
+            text.split(" ").filter(element => {
+              return element.length !== 0;
+            }).length}{" "}
+          Minutes read
+        </p>
         <h2>preview</h2>
         <p>{text.length > 0 ? text : "Enter Something Into Textbox To Preview Here "}</p>
       </div>
